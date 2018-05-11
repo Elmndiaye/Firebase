@@ -1,3 +1,54 @@
+//firebase goes here
+// start frebase
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDuo-wk8odH8kOPEkJFurvyIZETbxOEmIs",
+    authDomain: "fir-11-6fe81.firebaseapp.com",
+    databaseURL: "https://fir-11-6fe81.firebaseio.com",
+    projectId: "fir-11-6fe81",
+    storageBucket: "fir-11-6fe81.appspot.com",
+    messagingSenderId: "929086219159"
+  };
+  firebase.initializeApp(config);
+
+
+// end firebase
+
+
+
+$("#submitBtn").on("click", function(event){
+    event.preventDfault();
+
+    var name = $("#trainName").val().trim();
+    var destination = $("#destination").val().trim();
+    var nextArival = $("#nextTrain").val().trim();
+    var trainFreq = $("#frequency").val().trim();
+
+var newTrain = {
+    tname: name,
+    tdest: destination ,
+    start: nextArival,
+    frequency: trainFreq,
+};
+
+// uploads data to the database
+database.ref().push(newTrain);
+
+// alert user
+alert("Train added");
+
+$("#trainName").val("");
+$("#destination").val("");
+$("#nextTrain").val("");
+$("#frequency").val("");
+
+});
+
+
+
+
+
 // Assumptions
 var tFrequency = 3;
 
@@ -34,9 +85,9 @@ $("#submitBtn").on("click", function(event){
 
     var name = $("#trainName").val().trim();
     var destination = $("#destination").val().trim();
-    var frequency = $("#frequency").val().trim();
     var nextArival = $("#nextTrain").val().trim();
-    var minAway = $("#away").val().trim();
+    var frequency = $("#frequency").val().trim();
+
     $("table > tbody").append("<tr><td>" + name + "</tr></td>");
     var tableRow = $("<tr>");
     tableRow.append("<td>" + name + "</td>");
