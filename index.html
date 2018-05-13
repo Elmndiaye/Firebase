@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src='later'></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 <link type="text/css"rel="stylesheet" href=style.css>
-<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-<script src="logic.js"></script>
+
 
 </head>
 <body>
@@ -30,11 +28,11 @@
         <table class="table">
           <thead class="thead-dark">
             <tr>
-              <th id="traniNmae" scope="col">Train Name</th>
-              <th id="destination" scope="col">Destination</th>
-              <th id="frequency" scope="col">Frequency(mn)</th>
-              <th id="nextTrain" scope="col">Next arrival</th>
-              <th id="away" scope="col">Minutes Away</th>
+              <th  scope="col">Train Name</th>
+              <th  scope="col">Destination</th>
+              <th  scope="col">frequency(mn)</th>
+              <th  scope="col">Start</th>
+              <th  scope="col">Minutes Away</th>
             </tr>
           </thead>
             <tbody>
@@ -63,11 +61,11 @@
                   </div>
                   <div class="form-group">
                     <label for="startdateinput">First Train Time (HH:mm - military time)</label>
-                    <input type="datetime" class="form-control" id="startdate" placeholder="Start Date">
+                    <input type="datetime" class="form-control" id="startTrain" placeholder="Start Date">
                   </div>
                   <div class="form-group">
                     <label for="monthlyrateinput">Frequency:</label>
-                    <input type="number" class="form-control" id="frequency" placeholder="Frequency">
+                    <input type="number" class="form-control" id="frequency" placeholder="frequency">
                   </div>
                   
                   <button type="submit" id="add-train" class="btn btn-primary">Submit</button>
@@ -84,5 +82,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="logic.js"></script>
 </body>
 </html>
